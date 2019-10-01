@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Account form</h1>
+<form th:action="@{/create}" method="post" th:object="${sale}">
+    <div>
+        Email <input type="text" th:field="*{salesmanId}">
+
+    </div>
+
+    <div>
+        Name <input type="text" th:field="*{salemanName}">
+
+    </div>
+    <br>
+
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
